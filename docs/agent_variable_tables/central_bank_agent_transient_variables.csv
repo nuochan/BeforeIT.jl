@@ -1,0 +1,5 @@
+Variable,File,Function(s),Model Version,Description
+DE_CB,central_bank.jl,central_bank_equity,Both,"Change in Equity: The central bank's profit/loss for the period. Immediately added to E_CB."
+a1,init_CANVAS.jl,central_bank_rate,CANVAS,"Policy Rate History: A temporary vector holding the historical time series of the policy rate (r_bar_series) used as input for the adaptive learning algorithm."
+a2,init_CANVAS.jl,central_bank_rate,CANVAS,"External GDP History: A temporary vector holding the historical time series of Euro Area GDP (Y_EA_series) used as input for the adaptive learning algorithm."
+a3,init_CANVAS.jl,central_bank_rate,CANVAS,"External Inflation History: A temporary vector holding the historical time series of Euro Area Inflation (pi_EA_series) used as input for the adaptive learning algorithm."

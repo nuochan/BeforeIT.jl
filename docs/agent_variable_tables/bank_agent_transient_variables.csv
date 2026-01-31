@@ -1,0 +1,4 @@
+Variable,File,Function(s),Model Version,Description
+r_terms,bank.jl,bank_profits,Both,"Lending Income Base: A temporary variable that sums all assets on which the bank earns its main lending rate (r). This includes all firm loans (L_i) and any overdrafts from firms (-D_i) or households (-D_h)."
+r_bar_terms,bank.jl,bank_profits,Both,"Base Rate Cost/Income Base: A temporary variable that sums all assets and liabilities tied to the central bank's base rate (r_bar), capturing the net cost of holding deposits and income from reserves."
+DE_k,bank.jl,bank_equity,Both,"Change in Equity (Retained Earnings): Represents the portion of the bank's profits (Pi_k) that is kept as retained earnings after paying taxes and dividends. This value is immediately added to the bank's state variable E_k."

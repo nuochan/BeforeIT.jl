@@ -1,0 +1,9 @@
+Variable,File,Function(s),Model Version,Description
+pi_c_i,firms.jl,"firms_expectations_and_decisions",Both,"Cost-Push Inflation: The calculated inflation rate based on changes in the firm's labor, material, and capital costs. It is a direct input into the firm's price-setting rule in the original model."
+alpha_i,firms.jl,"firms_production",Both,"Effective Labor Productivity: The final labor productivity value used in the Leontief production function, adjusted downwards for any shortages of capital or materials."
+DD_e_i,firms.jl,"expected_deposits_capital_loans",Both,"Expected Change in Deposits: A temporary cash flow projection used to determine if the firm will have a cash surplus or deficit, which then informs its demand for new loans (DL_d_i)."
+gamma_d_i,init_CANVAS.jl,"firms_expectations_and_decisions",CANVAS,"Quantity Adjustment Signal: The core of the CANVAS demand-pull logic. It represents the percentage by which a firm decides to adjust its production quantity based on market feedback."
+pi_d_i,init_CANVAS.jl,"firms_expectations_and_decisions",CANVAS,"Price Adjustment Signal: The other half of the CANVAS demand-pull logic. It represents the percentage by which a firm decides to adjust its price."
+P_f,search_and_matching.jl,"initialize_variables_firms_market",Both,"Global Price List: A temporary vector combining the prices of all domestic firms and foreign importers into a single list for buyers to search from."
+S_f,search_and_matching.jl,"initialize_variables_firms_market",Both,"Global Supply List: A temporary vector combining the total available goods (inventory + new production) from all domestic firms and foreign importers."
+DM_d_ig,search_and_matching.jl,"perform_firms_market!",Both,"Firm-to-Firm Demand Matrix: A temporary matrix that tracks the specific demand of each firm `i` for the intermediate goods produced by sector `g`."

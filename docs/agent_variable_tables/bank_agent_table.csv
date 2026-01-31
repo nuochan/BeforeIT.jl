@@ -1,0 +1,13 @@
+Number,Variable,Data Type,Length,Path,File,Agent Role,Model Field,Description
+1,E_k,Float,Scalar,/src/model_init/,agents.jl,Bank,model.bank,"Equity capital (common equity) of the bank. Represents the bank's net worth."
+2,Pi_k,Float,Scalar,/src/model_init/,agents.jl,Bank,model.bank,"Realised profits of the bank for the current period, calculated from interest spreads."
+3,Pi_e_k,Float,Scalar,/src/model_init/,agents.jl,Bank,model.bank,"Expected profits of the bank, used for forward-looking decisions."
+4,D_k,Float,Scalar,/src/model_init/,agents.jl,Bank,model.bank,"A residual and balancing item on the bank's balance sheet (assets minus liabilities)."
+5,r,Float,Scalar,/src/model_init/,agents.jl,Bank,model.bank,"The interest rate for loans and mortgages set by the bank."
+6,Y_h,Float,Scalar,/src/model_init/,agents.jl,Household (Investor),model.bank,"Net disposable income of the bank owner, derived from the bank's profits."
+7,C_d_h,Float,Scalar,/src/model_init/,agents.jl,Household (Investor),model.bank,"Consumption budget of the bank owner."
+8,I_d_h,Float,Scalar,/src/model_init/,agents.jl,Household (Investor),model.bank,"Investment budget of the bank owner."
+9,C_h,Float,Scalar,/src/model_init/,agents.jl,Household (Investor),model.bank,"Realised consumption of the bank owner."
+10,I_h,Float,Scalar,/src/model_init/,agents.jl,Household (Investor),model.bank,"Realised investment of the bank owner."
+11,K_h,Float,Scalar,/src/model_init/,agents.jl,Household (Investor),model.bank,"Capital stock held by the bank owner."
+12,D_h,Float,Scalar,/src/model_init/,agents.jl,Household (Investor),model.bank,"Bank deposits held by the bank owner."

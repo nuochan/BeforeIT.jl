@@ -1,0 +1,12 @@
+Number,Variable,Data Type,Length,Path,File,Agent Role,Model Field,Description
+1,alpha_G,Float,Scalar,/src/model_init/,agents.jl,Government,model.gov,"Autoregressive coefficient for government consumption (persistence of spending)."
+2,beta_G,Float,Scalar,/src/model_init/,agents.jl,Government,model.gov,"Scalar constant for government consumption (baseline spending level)."
+3,sigma_G,Float,Scalar,/src/model_init/,agents.jl,Government,model.gov,"Variance coefficient for government consumption (magnitude of fiscal shocks)."
+4,Y_G,Float,Scalar,/src/model_init/,agents.jl,Government,model.gov,"Total government revenues for the period (from taxes)."
+5,C_G,Float,Scalar,/src/model_init/,agents.jl,Government,model.gov,"Total consumption demand of the general government (aggregate spending target)."
+6,L_G,Float,Scalar,/src/model_init/,agents.jl,Government,model.gov,"Total loans/debt taken out by the government."
+7,sb_inact,Float,Scalar,/src/model_init/,agents.jl,Government,model.gov,"Social benefits paid per person to inactive persons (e.g., pensions)."
+8,sb_other,Float,Scalar,/src/model_init/,agents.jl,Government,model.gov,"Other social benefits paid per person to all households."
+9,C_d_j,Float,156,/src/model_init/,agents.jl,Government,model.gov,"Consumption demand of local governments. A vector representing 156 disaggregated spending units (for Austria)."
+10,C_j,Float,Scalar,/src/model_init/,agents.jl,Government,model.gov,"Total realised government consumption after market matching."
+11,P_j,Float,Scalar,/src/model_init/,agents.jl,Government,model.gov,"Price index of goods and services consumed by the government."

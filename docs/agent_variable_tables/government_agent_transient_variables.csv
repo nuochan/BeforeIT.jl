@@ -1,0 +1,6 @@
+Variable,File,Function(s),Model Version,Description
+epsilon_G,government.jl,gov_expenditure,Both,"Fiscal Shock: A random number representing the unpredictable shock to government spending for the current period."
+"social_security, labour_income, etc.",government.jl,gov_revenues,Both,"Revenue Components: A series of temporary variables that calculate total tax revenue from different sources (income, VAT, corporate, etc.) before being summed into Y_G."
+social_benefits,government.jl,gov_loans,Both,"Total Social Benefits: A temporary variable calculating the total outlay on social benefits before the budget deficit is computed."
+Pi_G,government.jl,gov_loans,Both,"Government Deficit/Surplus: A temporary variable for the government's budget balance (Expenditures - Revenues)."
+DL_G,government.jl,gov_loans,Both,"Change in Government Debt: The new debt the government must issue (or repay) based on the deficit (Pi_G). This is used to update L_G."

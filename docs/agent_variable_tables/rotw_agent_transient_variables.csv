@@ -1,0 +1,3 @@
+Variable,File,Function(s),Model Version,Description
+DD_RoW,rotw.jl,rotw_deposits,Both,"Change in Deposits: Represents the net cash flow for the Rest of the World in the current period, calculated from the balance of trade (import sales minus export costs). This value is immediately added to the agent's state variable D_RoW."
+epsilon_pi_EA,init_CANVAS.jl,growth_inflation_EA,CANVAS,"Inflation Shock: A random number drawn from a normal distribution, scaled by sigma_pi_EA. It represents the unpredictable shock or noise in the Euro Area's inflation process for the current period."

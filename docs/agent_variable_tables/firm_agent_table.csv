@@ -1,0 +1,45 @@
+Number,Variable,Data Type,Length,Path,File,Agent Role,Model Field,Description
+1,G_i,Integer,624,/src/model_init/,agents.jl,Firm,model.firms,Sector identifier (1 to G).
+2,alpha_bar_i,Float,624,/src/model_init/,agents.jl,Firm,model.firms,Average productivity of labor.
+3,beta_i,Float,624,/src/model_init/,agents.jl,Firm,model.firms,Productivity of intermediate consumption.
+4,kappa_i,Float,624,/src/model_init/,agents.jl,Firm,model.firms,Productivity of capital.
+5,w_i,Float,624,/src/model_init/,agents.jl,Firm,model.firms,Current period wages paid to workers.
+6,w_bar_i,Float,624,/src/model_init/,agents.jl,Firm,model.firms,Sector average wage rate (benchmark).
+7,delta_i,Float,624,/src/model_init/,agents.jl,Firm,model.firms,Depreciation rate for capital stock.
+8,tau_Y_i,Float,624,/src/model_init/,agents.jl,Firm,model.firms,Net tax rate on products.
+9,tau_K_i,Float,624,/src/model_init/,agents.jl,Firm,model.firms,Net tax rate on production.
+10,N_i,Integer,624,/src/model_init/,agents.jl,Firm,model.firms,Number of persons employed.
+11,Y_i,Float,624,/src/model_init/,agents.jl,Firm,model.firms,Real production volume.
+12,Q_i,Float,624,/src/model_init/,agents.jl,Firm,model.firms,Realised sales volume.
+13,Q_d_i,Float,624,/src/model_init/,agents.jl,Firm,model.firms,Current demand for goods.
+14,P_i,Float,624,/src/model_init/,agents.jl,Firm,model.firms,Selling price of the product.
+15,S_i,Float,624,/src/model_init/,agents.jl,Firm,model.firms,Inventory stock level.
+16,K_i,Float,624,/src/model_init/,agents.jl,Firm,model.firms,Real capital stock.
+17,M_i,Float,624,/src/model_init/,agents.jl,Firm,model.firms,Intermediate goods and raw materials.
+18,L_i,Float,624,/src/model_init/,agents.jl,Firm,model.firms,Outstanding bank loans.
+19,pi_bar_i,Float,624,/src/model_init/,agents.jl,Firm,model.firms,Operating profit margin target.
+20,D_i,Float,624,/src/model_init/,agents.jl,Firm,model.firms,Firm's bank deposits.
+21,Pi_i,Float,624,/src/model_init/,agents.jl,Firm,model.firms,Period profits (pre-dividend).
+22,V_i,Integer,624,/src/model_init/,agents.jl,Firm,model.firms,Open job vacancies.
+23,I_i,Float,624,/src/model_init/,agents.jl,Firm,model.firms,Realised investment.
+24,E_i,Float,624,/src/model_init/,agents.jl,Firm,model.firms,Firm's equity/net worth.
+25,P_bar_i,Float,624,/src/model_init/,agents.jl,Firm,model.firms,Local price index tracker.
+26,P_CF_i,Float,624,/src/model_init/,agents.jl,Firm,model.firms,Capital goods price tracker.
+27,DS_i,Float,624,/src/model_init/,agents.jl,Firm,model.firms,Change in final goods stock.
+28,DM_i,Float,624,/src/model_init/,agents.jl,Firm,model.firms,Change in material stock.
+29,DL_i,Float,624,/src/model_init/,agents.jl,Firm,model.firms,New loans obtained.
+30,DL_d_i,Float,624,/src/model_init/,agents.jl,Firm,model.firms,Target/desired new loans.
+31,K_e_i,Float,624,/src/model_init/,agents.jl,Firm,model.firms,Expected capital next period.
+32,L_e_i,Float,624,/src/model_init/,agents.jl,Firm,model.firms,Expected loan needs.
+33,Q_s_i,Float,624,/src/model_init/,agents.jl,Firm,model.firms,Expected sales forecast.
+34,I_d_i,Float,624,/src/model_init/,agents.jl,Firm,model.firms,Desired investment amount.
+35,DM_d_i,Float,624,/src/model_init/,agents.jl,Firm,model.firms,Desired material purchases.
+36,N_d_i,Integer,624,/src/model_init/,agents.jl,Firm,model.firms,Target employment level.
+37,Pi_e_i,Float,624,/src/model_init/,agents.jl,Firm,model.firms,Expected profit forecast.
+38,Y_h,Float,624,/src/model_init/,agents.jl,Household (Investor),model.firms,Net disposable income of the owner.
+39,C_d_h,Float,624,/src/model_init/,agents.jl,Household (Investor),model.firms,Consumption budget of the owner.
+40,I_d_h,Float,624,/src/model_init/,agents.jl,Household (Investor),model.firms,Investment budget of the owner.
+41,C_h,Float,624,/src/model_init/,agents.jl,Household (Investor),model.firms,Realised consumption of the owner.
+42,I_h,Float,624,/src/model_init/,agents.jl,Household (Investor),model.firms,Realised investment of the owner.
+43,K_h,Float,624,/src/model_init/,agents.jl,Household (Investor),model.firms,Capital stock held by the owner.
+44,D_h,Float,624,/src/model_init/,agents.jl,Household (Investor),model.firms,Bank deposits held by the owner.

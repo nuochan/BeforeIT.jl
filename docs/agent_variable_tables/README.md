@@ -6,6 +6,9 @@ This folder contains structured documentation of the variables used by each agen
 
 ## Documentation Files
 All data tables are located in the `docs/agent_variable_tables` subfolder.
+- `agent_variable_tables/workers_agent_transient_variables.csv`: A list of key transient variables for the `Workers` agent (shared by both active and inactive workers).
+- `agent_variable_tables/workers_inactive_agent_table.csv`: Detailed breakdown of state variables for the `Workers` agent (inactive workers).
+- `agent_variable_tables/workers_active_agent_table.csv`: Detailed breakdown of state variables for the `Workers` agent (active workers, including employed and unemployed).
 - `agent_variable_tables/government_agent_transient_variables.csv`: A list of key transient variables for the `Government` agent.
 - `agent_variable_tables/government_agent_table.csv`: Detailed breakdown of state variables for the `Government` agent.
 - `agent_variable_tables/central_bank_agent_transient_variables.csv`: A list of key transient variables for the `CentralBank` agent.
@@ -51,3 +54,9 @@ The transient variable tables (`*_transient_variables.csv`) are not exhaustive l
 - Moved all CSV data tables into the `docs/agent_variable_tables` subfolder for better organization.
 - Created `government_agent_table.csv` and `government_agent_transient_variables.csv`, verifying variable lengths and detailing all transient revenue components.
 - Corrected `central_bank_agent_transient_variables.csv` to expand folded variables into detailed rows.
+
+### 2026-02-02
+- Created `workers_active_agent_table.csv` documenting 9 state variables for the active Workers agent (4118 workers in Austria).
+- Created `workers_inactive_agent_table.csv` documenting 9 state variables for the inactive Workers agent (4130 workers in Austria).
+- Created `workers_agent_transient_variables.csv` documenting 2 key transient variables shared by both active and inactive workers.
+- Note: Workers agent has two separate instances in the model: `model.w_act` (active workers including employed and unemployed) and `model.w_inact` (inactive workers such as retirees).

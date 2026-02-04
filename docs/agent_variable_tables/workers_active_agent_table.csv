@@ -1,0 +1,10 @@
+Number,Variable,Data Type,Length (Austria),Path,File,Agent Role,Model Field,Description
+1,Y_h,Float64,4118,model.w_act.Y_h,src/agent_actions/households.jl,Household (Worker - Active),model.w_act,Net disposable income of active worker
+2,D_h,Float64,4118,model.w_act.D_h,src/agent_actions/households.jl,Household (Worker - Active),model.w_act,Deposits held by active worker
+3,K_h,Float64,4118,model.w_act.K_h,src/agent_actions/households.jl,Household (Worker - Active),model.w_act,Capital stock owned by active worker
+4,w_h,Float64,4118,model.w_act.w_h,src/agent_actions/households.jl,Household (Worker - Active),model.w_act,Wage rate (0 if unemployed)
+5,O_h,Int64,4118,model.w_act.O_h,src/markets/search_and_matching_labour.jl,Household (Worker - Active),model.w_act,Occupation/employer ID (0 if unemployed)
+6,C_d_h,Float64,4118,model.w_act.C_d_h,src/agent_actions/households.jl,Household (Worker - Active),model.w_act,Desired consumption budget
+7,I_d_h,Float64,4118,model.w_act.I_d_h,src/agent_actions/households.jl,Household (Worker - Active),model.w_act,Desired investment budget (housing)
+8,C_h,Float64,4118,model.w_act.C_h,src/markets/search_and_matching.jl,Household (Worker - Active),model.w_act,Realized consumption expenditure
+9,I_h,Float64,4118,model.w_act.I_h,src/markets/search_and_matching.jl,Household (Worker - Active),model.w_act,Realized investment expenditure (housing)

@@ -1,40 +1,40 @@
-Number,Variable,Data Type,Length,Parameter Type,Shock Susceptible,Description
-1,G,Integer,1,Dimension,No,Number of products
-2,T_prime,Integer,1,Dimension,No,Time interval used to estimate parameters for expectations
-3,H_act,Integer,1,Dimension,No,Number of economically active persons
-4,H_inact,Integer,1,Dimension,No,Number of economically inactive persons
-5,J,Integer,1,Dimension,No,Number of government entities
-6,L,Integer,1,Dimension,No,Number of foreign consumers
-7,I_s,Vector{Integer},62,Dimension,No,Number of firms/investors in the s-th industry
-8,I,Integer,1,Dimension,No,Total number of firms (sum of I_s)
-9,H,Integer,1,Dimension,No,Total number of households (H_act + H_inact)
-10,tau_INC,Float,1,Tax Rate,No,Income tax rate
-11,tau_FIRM,Float,1,Tax Rate,No,Corporate tax rate
-12,tau_VAT,Float,1,Tax Rate,No,Value-added tax rate
-13,tau_SIF,Float,1,Tax Rate,No,Social insurance rate (employers' contributions)
-14,tau_SIW,Float,1,Tax Rate,No,Social insurance rate (employees' contributions)
-15,tau_EXPORT,Float,1,Tax Rate,No,Export tax rate
-16,tau_CF,Float,1,Tax Rate,No,Tax rate on capital formation
-17,tau_G,Float,1,Tax Rate,No,Tax rate on government consumption
-18,theta_UB,Float,1,Behavioral,No,Unemployment benefit replacement rate
-19,psi,Float,1,Behavioral,Yes,Fraction of income devoted to consumption
-20,psi_H,Float,1,Behavioral,No,Fraction of income devoted to investment in housing
-21,mu,Float,1,Behavioral,No,Risk premium on policy rate
-22,theta_DIV,Float,1,Banking,No,Dividend payout ratio
-23,theta,Float,1,Banking,No,Rate of installment on debt
-24,zeta,Float,1,Banking,No,Banks' capital requirement coefficient
-25,zeta_LTV,Float,1,Banking,No,Loan-to-value (LTV) ratio
-26,zeta_b,Float,1,Banking,No,Loan-to-capital ratio for new firms after bankruptcy
-27,b_CF_g,Vector{Float},62,Product Coefficient,No,Capital formation coefficient for g-th product (firm investment)
-28,b_CFH_g,Vector{Float},62,Product Coefficient,No,Household investment coefficient of the g-th product
-29,b_HH_g,Vector{Float},62,Product Coefficient,No,Consumption coefficient for g-th product of households
-30,c_G_g,Vector{Float},62,Product Coefficient,No,Consumption of the g-th product of the government in mln. Euro
-31,c_E_g,Vector{Float},62,Product Coefficient,No,Exports of the g-th product in mln. Euro
-32,c_I_g,Vector{Float},62,Product Coefficient,No,Imports of the g-th product in mln. Euro
-33,a_sg,Matrix{Float},62×62,Technology,No,Technology coefficient of the g-th product in the s-th industry
-34,C,Matrix{Float},62×62,Technology,No,Leontief input-output coefficient matrix
-35,D_H,Float,1,Initial Condition,No,Total household deposits at initialization
-36,K_H,Float,1,Initial Condition,No,Total household capital at initialization
-37,sb_other,Float,1,Initial Condition,No,Social benefits to other categories at initialization
-38,E_k,Float,1,Initial Condition,No,Kinetic energy parameter at initialization
-39,r_bar,Float,1,Initial Condition,No,Baseline interest rate at initialization
+Number,Variable,Data Type,Type,Length,Parameter Type,Shock Susceptible,Description
+1,G,Integer,Scalar,1,Dimension,No,Number of products
+2,T_prime,Integer,Scalar,1,Dimension,No,Time interval used to estimate parameters for expectations
+3,H_act,Integer,Scalar,1,Dimension,No,Number of economically active persons
+4,H_inact,Integer,Scalar,1,Dimension,No,Number of economically inactive persons
+5,J,Integer,Scalar,1,Dimension,No,Number of government entities
+6,L,Integer,Scalar,1,Dimension,No,Number of foreign consumers
+7,I_s,Integer,Vector,62,Dimension,No,Number of firms/investors in the s-th industry
+8,I,Integer,Scalar,1,Dimension,No,Total number of firms (sum of I_s)
+9,H,Integer,Scalar,1,Dimension,No,Total number of households (H_act + H_inact)
+10,tau_INC,Float,Scalar,1,Tax Rate,No,Income tax rate
+11,tau_FIRM,Float,Scalar,1,Tax Rate,No,Corporate tax rate
+12,tau_VAT,Float,Scalar,1,Tax Rate,No,Value-added tax rate
+13,tau_SIF,Float,Scalar,1,Tax Rate,No,Social insurance rate (employers' contributions)
+14,tau_SIW,Float,Scalar,1,Tax Rate,No,Social insurance rate (employees' contributions)
+15,tau_EXPORT,Float,Scalar,1,Tax Rate,No,Export tax rate
+16,tau_CF,Float,Scalar,1,Tax Rate,No,Tax rate on capital formation
+17,tau_G,Float,Scalar,1,Tax Rate,No,Tax rate on government consumption
+18,theta_UB,Float,Scalar,1,Behavioral,No,Unemployment benefit replacement rate
+19,psi,Float,Scalar,1,Behavioral,Yes,Fraction of income devoted to consumption
+20,psi_H,Float,Scalar,1,Behavioral,No,Fraction of income devoted to investment in housing
+21,mu,Float,Scalar,1,Behavioral,No,Risk premium on policy rate
+22,theta_DIV,Float,Scalar,1,Banking,No,Dividend payout ratio
+23,theta,Float,Scalar,1,Banking,No,Rate of installment on debt
+24,zeta,Float,Scalar,1,Banking,No,Banks' capital requirement coefficient
+25,zeta_LTV,Float,Scalar,1,Banking,No,Loan-to-value (LTV) ratio
+26,zeta_b,Float,Scalar,1,Banking,No,Loan-to-capital ratio for new firms after bankruptcy
+27,b_CF_g,Float,Vector,62,Product Coefficient,No,Capital formation coefficient for g-th product (firm investment)
+28,b_CFH_g,Float,Vector,62,Product Coefficient,No,Household investment coefficient of the g-th product
+29,b_HH_g,Float,Vector,62,Product Coefficient,No,Consumption coefficient for g-th product of households
+30,c_G_g,Float,Vector,62,Product Coefficient,No,Consumption of the g-th product of the government in mln. Euro
+31,c_E_g,Float,Vector,62,Product Coefficient,No,Exports of the g-th product in mln. Euro
+32,c_I_g,Float,Vector,62,Product Coefficient,No,Imports of the g-th product in mln. Euro
+33,a_sg,Float,Matrix,62×62,Technology,No,Technology coefficient of the g-th product in the s-th industry
+34,C,Float,Matrix,62×62,Technology,No,Leontief input-output coefficient matrix
+35,D_H,Float,Scalar,1,Initial Condition,No,Total household deposits at initialization
+36,K_H,Float,Scalar,1,Initial Condition,No,Total household capital at initialization
+37,sb_other,Float,Scalar,1,Initial Condition,No,Social benefits to other categories at initialization
+38,E_k,Float,Scalar,1,Initial Condition,No,Kinetic energy parameter at initialization
+39,r_bar,Float,Scalar,1,Initial Condition,No,Baseline interest rate at initialization

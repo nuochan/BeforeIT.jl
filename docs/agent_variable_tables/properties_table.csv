@@ -31,8 +31,8 @@ Number,Variable,Data Type,Type,Length,Parameter Type,Shock Susceptible,Descripti
 30,c_G_g,Float,Vector,62,Product Coefficient,No,Consumption of the g-th product of the government in mln. Euro
 31,c_E_g,Float,Vector,62,Product Coefficient,No,Exports of the g-th product in mln. Euro
 32,c_I_g,Float,Vector,62,Product Coefficient,No,Imports of the g-th product in mln. Euro
-33,a_sg,Float,Matrix,62×62,Technology,No,Technology coefficient of the g-th product in the s-th industry
-34,C,Float,Matrix,62×62,Technology,No,Leontief input-output coefficient matrix
+33,a_sg,Float,Matrix,62 by 62,Technology,No,Technology coefficient of the g-th product in the s-th industry
+34,C,Float,Matrix,62 by 62,Technology,No,Leontief input-output coefficient matrix
 35,D_H,Float,Scalar,1,Initial Condition,No,Total household deposits at initialization
 36,K_H,Float,Scalar,1,Initial Condition,No,Total household capital at initialization
 37,sb_other,Float,Scalar,1,Initial Condition,No,Social benefits to other categories at initialization

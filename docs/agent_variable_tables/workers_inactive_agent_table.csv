@@ -1,10 +1,10 @@
-Number,Variable,Data Type,Length (Austria),Path,File,Agent Role,Model Field,Description
-1,Y_h,Float64,4130,model.w_inact.Y_h,src/agent_actions/households.jl,Household (Worker - Inactive),model.w_inact,Net disposable income of inactive worker
-2,D_h,Float64,4130,model.w_inact.D_h,src/agent_actions/households.jl,Household (Worker - Inactive),model.w_inact,Deposits held by inactive worker
-3,K_h,Float64,4130,model.w_inact.K_h,src/agent_actions/households.jl,Household (Worker - Inactive),model.w_inact,Capital stock owned by inactive worker
-4,w_h,Float64,4130,model.w_inact.w_h,src/model_init/init_workers.jl,Household (Worker - Inactive),model.w_inact,Wage rate (always 0 for inactive workers)
-5,O_h,Int64,4130,model.w_inact.O_h,src/model_init/init_workers.jl,Household (Worker - Inactive),model.w_inact,Occupation/employer ID (always -1 for inactive workers)
-6,C_d_h,Float64,4130,model.w_inact.C_d_h,src/agent_actions/households.jl,Household (Worker - Inactive),model.w_inact,Desired consumption budget
-7,I_d_h,Float64,4130,model.w_inact.I_d_h,src/agent_actions/households.jl,Household (Worker - Inactive),model.w_inact,Desired investment budget (housing)
-8,C_h,Float64,4130,model.w_inact.C_h,src/markets/search_and_matching.jl,Household (Worker - Inactive),model.w_inact,Realized consumption expenditure
-9,I_h,Float64,4130,model.w_inact.I_h,src/markets/search_and_matching.jl,Household (Worker - Inactive),model.w_inact,Realized investment expenditure (housing)
+Number,Variable,Data Type,Length,Path,File,Agent Role,Model Field,Description
+1,Y_h,Float,4130,/src/model_init/,agents.jl,Household (Worker - Inactive),model.w_inact,Net disposable income of inactive worker
+2,D_h,Float,4130,/src/model_init/,agents.jl,Household (Worker - Inactive),model.w_inact,Deposits held by inactive worker
+3,K_h,Float,4130,/src/model_init/,agents.jl,Household (Worker - Inactive),model.w_inact,Capital stock owned by inactive worker
+4,w_h,Float,4130,/src/model_init/,agents.jl,Household (Worker - Inactive),model.w_inact,Wage rate (always 0 for inactive workers)
+5,O_h,Integer,4130,/src/model_init/,agents.jl,Household (Worker - Inactive),model.w_inact,Occupation/employer ID (always -1 for inactive workers)
+6,C_d_h,Float,4130,/src/model_init/,agents.jl,Household (Worker - Inactive),model.w_inact,Desired consumption budget
+7,I_d_h,Float,4130,/src/model_init/,agents.jl,Household (Worker - Inactive),model.w_inact,Desired investment budget (housing)
+8,C_h,Float,4130,/src/model_init/,agents.jl,Household (Worker - Inactive),model.w_inact,Realized consumption expenditure
+9,I_h,Float,4130,/src/model_init/,agents.jl,Household (Worker - Inactive),model.w_inact,Realized investment expenditure (housing)

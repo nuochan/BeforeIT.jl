@@ -1,0 +1,10 @@
+Number,Variable,Data Type,Length,Path,File,Agent Role,Model Field,Description
+1,r_bar,Float,Scalar,/src/model_init/,agents.jl,CentralBank,model.cb,Nominal policy interest rate set by the central bank
+2,r_G,Float,Scalar,/src/model_init/,agents.jl,CentralBank,model.cb,Interest rate on government bonds
+3,rho,Float,Scalar,/src/model_init/,agents.jl,CentralBank,model.cb,"Parameter for gradual adjustment of the policy rate (smoothing parameter)"
+4,r_star,Float,Scalar,/src/model_init/,agents.jl,CentralBank,model.cb,"Real equilibrium interest rate (long-run target)"
+5,pi_star,Float,Scalar,/src/model_init/,agents.jl,CentralBank,model.cb,"Inflation target set by the central bank"
+6,xi_pi,Float,Scalar,/src/model_init/,agents.jl,CentralBank,model.cb,"Weight the central bank places on inflation targeting in the Taylor rule"
+7,xi_gamma,Float,Scalar,/src/model_init/,agents.jl,CentralBank,model.cb,"Weight the central bank places on economic activity in the Taylor rule"
+8,E_CB,Float,Scalar,/src/model_init/,agents.jl,CentralBank,model.cb,"Central bank equity capital"
+9,r_bar_series,Float,Non-fixed,/src/model_extensions/,init_CANVAS.jl,CentralBank,model.cb,"Historical time series of policy rates (CANVAS extension only). Used for adaptive learning algorithm."

@@ -1,3 +1,3 @@
 Variable,File,Function(s),Model Version,Description
-Y_e_h,src/agent_actions/households.jl,"households_income_act(), households_income_inact(), households_income_firms(), households_income_bank()",Base,Expected disposable income used for budget planning. Calculated with expected inflation pi_e.
-DD_h,src/agent_actions/households.jl,households_deposits(),Base,"Change in deposits. Calculated as: Y_h - (1+tau_VAT)*C_h - (1+tau_CF)*I_h + r_bar*max(0,D_h) - r*max(0,-D_h)"
+Y_e_h,households.jl,"households_income_act(), households_income_inact(), households_income_firms(), households_income_bank()",Both,Expected disposable income used for budget planning. Calculated with expected inflation pi_e.
+DD_h,households.jl,households_deposits(),Both,"Change in deposits. Calculated as: Y_h - (1+tau_VAT)*C_h - (1+tau_CF)*I_h + r_bar*max(0,D_h) - r*max(0,-D_h)"

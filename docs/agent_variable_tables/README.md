@@ -34,6 +34,8 @@ The transient variable tables (`*_transient_variables.csv`) are not exhaustive l
 
 ### Data Columns
 - **Variable**: The field name in the Julia struct.
+- **Path**: The folder path within the repository where the variable is defined (e.g., `/src/model_init/`).
+- **File**: The primary file (prioritizing `model_init` as the entry point for understanding the model).
 - **Length**: The cardinality of the vector when initialized with the `AUSTRIA2010Q1` dataset. 
   - **Fixed**: Dimensions tied to the structure of the economy (e.g., number of firms or sectors).
   - **Non-fixed**: Dimensions tied to time/simulation period (used in CANVAS extension).
@@ -60,3 +62,12 @@ The transient variable tables (`*_transient_variables.csv`) are not exhaustive l
 - Created `workers_inactive_agent_table.csv` documenting 9 state variables for the inactive Workers agent (4130 workers in Austria).
 - Created `workers_agent_transient_variables.csv` documenting 2 key transient variables shared by both active and inactive workers.
 - Note: Workers agent has two separate instances in the model: `model.w_act` (active workers including employed and unemployed) and `model.w_inact` (inactive workers such as retirees).
+
+### 2026-02-04
+- Updated Workers agent tables to use consistent format: Path column now shows folder path (`/src/model_init/`), File column prioritizes `agents.jl` as the entry point, and Length column shows just the number without qualifier.
+- Created missing `central_bank_agent_table.csv` documenting 9 state variables (8 base + 1 CANVAS extension).
+- Fixed `workers_agent_transient_variables.csv` to remove full path prefix in File column (now just "households.jl").
+- Expanded `government_agent_transient_variables.csv` from 6 to 13 rows, detailing all individual revenue components (social_security, labour_income, value_added, capital_income, corporate_income, capital_formation, products, production, export_).
+- Updated Workers agent tables to use abstract data types: "Float" and "Integer" instead of "Float64" and "Int64" to match format of other agent tables.
+- Clarified "Model Version" column in all transient variable tables: "Both" means the variable exists in both the base BeforeIT model and CANVAS extension, "CANVAS" means the variable only exists in the CANVAS extension.
+- Ensured format consistency across all CSV files: state variable tables use same column structure, transient variable tables use same column structure.

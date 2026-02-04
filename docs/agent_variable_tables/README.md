@@ -48,13 +48,30 @@ The transient variable tables (`*_transient_variables.csv`) are not exhaustive l
 - **Excluded ("Scratchpad" Variables)**: Minor, intermediate variables used only to improve the readability of a formula within a single function (e.g., `in_sales`, `out_wages` in the `firms_profits` function). These are considered implementation details and are not critical for understanding the agent's overall logic flow.
 
 ### Data Columns
+
+#### Agent State Variable Tables
 - **Variable**: The field name in the Julia struct.
-- **Path**: The folder path within the repository where the variable is defined (e.g., `/src/model_init/`).
-- **File**: The primary file (prioritizing `model_init` as the entry point for understanding the model).
+- **Data Type**: Abstract data type (Float, Integer).
 - **Length**: The cardinality of the vector when initialized with the `AUSTRIA2010Q1` dataset. 
   - **Fixed**: Dimensions tied to the structure of the economy (e.g., number of firms or sectors).
   - **Non-fixed**: Dimensions tied to time/simulation period (used in CANVAS extension).
-- **Path/File**: Location of the variable definition in the repository.
+- **Agent Role**: The economic role of the variable (e.g., Firm, Bank, Household).
+- **Model Field**: The technical location in the code (e.g., `model.firms`).
+
+#### Model Properties Table
+- **Variable**: The parameter name.
+- **Data Type**: Abstract data type (Float, Integer).
+- **Type**: Structure type (Scalar, Vector, Matrix).
+- **Length**: Dimensions of the parameter.
+- **Parameter Type**: Functional classification:
+  - **Dimension**: Model structure parameters defining the size of the economy (number of agents, sectors, time periods).
+  - **Tax Rate**: Fiscal policy parameters representing tax rates on income, consumption, production, etc.
+  - **Behavioral**: Parameters controlling household and agent decision-making behavior (consumption propensities, unemployment benefits, risk premiums).
+  - **Banking**: Parameters related to banking sector operations and credit constraints (capital requirements, loan-to-value ratios, dividend policies).
+  - **Product Coefficient**: Demand/supply distribution coefficients across products and sectors.
+  - **Technology**: Technical input-output matrices defining production relationships between sectors.
+  - **Initial Condition**: Parameters set at model initialization defining starting economic values.
+- **Shock Susceptible**: Indicates whether the parameter is subject to external policy or demand shocks (Yes/No).
 
 ## Change Log
 ### 2026-01-30

@@ -1,5 +1,5 @@
 Number,Variable,Data Type,Type,Data Category,Description
-1,collection_time,Integer,Vector,Metadata,Time periods collected (timestamps)
+1,collection_time,Integer,Vector,Time Index,Simulation period index for data collection alignment
 2,nominal_gdp,Float,Vector,National Accounts,Nominal gross domestic product
 3,real_gdp,Float,Vector,National Accounts,Real gross domestic product
 4,nominal_gva,Float,Vector,National Accounts,Nominal gross value added

@@ -4,6 +4,19 @@
 
 This folder contains structured documentation of the variables used by each agent in the BeforeIT.jl model.
 
+## Documentation Summary
+
+**Complete variable documentation for all six agents in BeforeIT.jl:**
+- **Workers (Active)**: 9 state variables, 2 transient variables (4,118 workers in Austria)
+- **Workers (Inactive)**: 9 state variables, 2 transient variables (4,130 workers in Austria)
+- **Firms**: 44 state variables (37 firm + 7 investor household), 8 transient variables (624 firms in Austria)
+- **Bank**: 12 state variables (5 bank + 7 owner household), 3 transient variables (scalar)
+- **Central Bank**: 9 state variables (8 base + 1 CANVAS), 4 transient variables (scalar)
+- **Government**: 11 state variables, 13 transient variables (detailed revenue components)
+- **Rest of World**: 27 state variables (25 base + 2 CANVAS), 2 transient variables
+
+**Totals**: 121 state variables and 32 transient variables documented across 13 CSV files.
+
 ## Documentation Files
 All data tables are located in the `docs/agent_variable_tables` subfolder.
 - `agent_variable_tables/workers_agent_transient_variables.csv`: A list of key transient variables for the `Workers` agent (shared by both active and inactive workers).
@@ -71,3 +84,4 @@ The transient variable tables (`*_transient_variables.csv`) are not exhaustive l
 - Updated Workers agent tables to use abstract data types: "Float" and "Integer" instead of "Float64" and "Int64" to match format of other agent tables.
 - Clarified "Model Version" column in all transient variable tables: "Both" means the variable exists in both the base BeforeIT model and CANVAS extension, "CANVAS" means the variable only exists in the CANVAS extension.
 - Ensured format consistency across all CSV files: state variable tables use same column structure, transient variable tables use same column structure.
+- **Completed documentation for all six agents**: Workers (Active & Inactive), Firms, Bank, Central Bank, Government, and Rest of World. Total: 121 state variables and 32 transient variables documented across 13 CSV files.

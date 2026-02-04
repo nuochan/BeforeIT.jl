@@ -1,0 +1,29 @@
+Number,Variable,Data Type,Type,Data Category,Description
+1,collection_time,Integer,Vector,Metadata,Time periods collected (timestamps)
+2,nominal_gdp,Float,Vector,National Accounts,Nominal gross domestic product
+3,real_gdp,Float,Vector,National Accounts,Real gross domestic product
+4,nominal_gva,Float,Vector,National Accounts,Nominal gross value added
+5,real_gva,Float,Vector,National Accounts,Real gross value added
+6,nominal_household_consumption,Float,Vector,Consumption,Nominal household consumption spending
+7,real_household_consumption,Float,Vector,Consumption,Real household consumption spending
+8,nominal_government_consumption,Float,Vector,Consumption,Nominal government consumption spending
+9,real_government_consumption,Float,Vector,Consumption,Real government consumption spending
+10,nominal_capitalformation,Float,Vector,Capital Formation,Nominal total capital formation (gross fixed + changes in inventory)
+11,real_capitalformation,Float,Vector,Capital Formation,Real total capital formation
+12,nominal_fixed_capitalformation,Float,Vector,Capital Formation,Nominal gross fixed capital formation
+13,real_fixed_capitalformation,Float,Vector,Capital Formation,Real gross fixed capital formation
+14,nominal_fixed_capitalformation_dwellings,Float,Vector,Capital Formation,Nominal gross fixed capital formation in dwellings
+15,real_fixed_capitalformation_dwellings,Float,Vector,Capital Formation,Real gross fixed capital formation in dwellings
+16,nominal_exports,Float,Vector,Trade,Nominal exports of goods and services
+17,real_exports,Float,Vector,Trade,Real exports of goods and services
+18,nominal_imports,Float,Vector,Trade,Nominal imports of goods and services
+19,real_imports,Float,Vector,Trade,Real imports of goods and services
+20,operating_surplus,Float,Vector,Income Components,Operating surplus (profit) of firms
+21,compensation_employees,Float,Vector,Income Components,Total compensation of employees (wages and social contributions)
+22,wages,Float,Vector,Income Components,Employee wages only
+23,taxes_production,Float,Vector,Income Components,Taxes on production and imports
+24,gdp_deflator_growth_ea,Float,Vector,Price Indicators,GDP deflator growth rate (Euro Area reference)
+25,real_gdp_ea,Float,Vector,Price Indicators,Real GDP (Euro Area reference)
+26,euribor,Float,Vector,Price Indicators,EURIBOR interest rate
+27,nominal_sector_gva,Float,Vector of Vectors,Sectoral Data,Nominal GVA by sector (G products)
+28,real_sector_gva,Float,Vector of Vectors,Sectoral Data,Real GVA by sector (G products)

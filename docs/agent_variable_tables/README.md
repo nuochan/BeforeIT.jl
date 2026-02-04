@@ -14,8 +14,9 @@ This folder contains structured documentation of the variables used by each agen
 - **Central Bank**: 9 state variables (8 base + 1 CANVAS), 4 transient variables (scalar)
 - **Government**: 11 state variables, 13 transient variables (detailed revenue components)
 - **Rest of World**: 27 state variables (25 base + 2 CANVAS), 2 transient variables
+- **Model Properties**: 39 parameters (dimensions, tax rates, behavioral, banking, product coefficients, technology, initial conditions)
 
-**Totals**: 121 state variables and 32 transient variables documented across 13 CSV files.
+**Totals**: 121 state variables, 32 transient variables, and 39 model parameters documented across 14 CSV files.
 
 ## Documentation Files
 All data tables are located in the `docs/agent_variable_tables` subfolder.
@@ -32,6 +33,7 @@ All data tables are located in the `docs/agent_variable_tables` subfolder.
 - `docs/agent_variable_tables/rotw_agent_table.csv`: Detailed breakdown of state variables for the `RestOfTheWorld` agent, including CANVAS extension variables.
 - `docs/agent_variable_tables/firm_agent_table.csv`: Detailed breakdown of **state variables** in the `Firms` agent role, distinguishing between the firm's production data and the owner's (investor) household data.
 - `docs/agent_variable_tables/firm_agent_transient_variables.csv`: A list of key **transient (local) variables** used in firm-level calculations, which are not stored as part of the agent's state but are critical for understanding its behavior.
+- `docs/agent_variable_tables/properties_table.csv`: Comprehensive list of 39 model parameters and configuration values, including economic dimensions, tax rates, behavioral parameters, banking coefficients, technology matrices, and initial conditions.
 
 ## Key Definitions
 
@@ -85,3 +87,5 @@ The transient variable tables (`*_transient_variables.csv`) are not exhaustive l
 - Clarified "Model Version" column in all transient variable tables: "Both" means the variable exists in both the base BeforeIT model and CANVAS extension, "CANVAS" means the variable only exists in the CANVAS extension.
 - Ensured format consistency across all CSV files: state variable tables use same column structure, transient variable tables use same column structure.
 - **Completed documentation for all six agents**: Workers (Active & Inactive), Firms, Bank, Central Bank, Government, and Rest of World. Total: 121 state variables and 32 transient variables documented across 13 CSV files.
+- Created `properties_table.csv` documenting all 39 model parameters from `init_properties.jl`: 9 dimension parameters, 8 tax rates, 4 behavioral parameters, 5 banking coefficients, 6 product coefficients, 2 technology matrices, and 5 initial conditions. Added "Shock Susceptible" column identifying parameters subject to external shocks (only `psi` susceptible to ConsumptionShock).
+- Updated Documentation Summary to reflect 39 model parameters and 14 total CSV files.

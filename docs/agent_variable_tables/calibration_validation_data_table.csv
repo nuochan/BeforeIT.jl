@@ -25,5 +25,5 @@ Number,Variable,Data Type,Type,Data Category,Description
 24,gdp_deflator_growth_ea,Float,Vector,Price Indicators,GDP deflator growth rate (Euro Area reference)
 25,real_gdp_ea,Float,Vector,Price Indicators,Real GDP (Euro Area reference)
 26,euribor,Float,Vector,Price Indicators,EURIBOR interest rate
-27,nominal_sector_gva,Float,Vector of Vectors,Sectoral Data,Nominal GVA by sector (G products)
-28,real_sector_gva,Float,Vector of Vectors,Sectoral Data,Real GVA by sector (G products)
+27,nominal_sector_gva,Float,Matrix,time by 62,Sectoral Data,Nominal GVA by sector (G products)
+28,real_sector_gva,Float,Matrix,time by 62,Sectoral Data,Real GVA by sector (G products)

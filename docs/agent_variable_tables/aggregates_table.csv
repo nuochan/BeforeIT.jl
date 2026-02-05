@@ -11,6 +11,6 @@ Number,Variable,Data Type,Type,Aggregate Category,Description,Note
 10,gamma_e,Float,Scalar,GDP & Growth,Expected growth rate,
 11,pi_e,Float,Scalar,Inflation,Expected inflation rate,
 12,epsilon_Y_EA,Float,Scalar,Exogenous Shocks,External demand shock (Euro Area GDP),"Stochastically computed each period from covariance matrix (not a fixed parameter). Represents external Euro Area GDP shock that drives Rest of World dynamics. Drawn from multivariate normal distribution via Cholesky decomposition."
-13,epsilon_E,Float,Scalar,Exogenous Shocks,External supply shock (exports),"Stochastically computed each period from covariance matrix (not a fixed parameter). Directly affects export demand in rotw_import_export(): C_E = exp(α*log(C_E) + β + epsilon_E). Correlated with other epsilon shocks."
-14,epsilon_I,Float,Scalar,Exogenous Shocks,External supply shock (imports),"Stochastically computed each period from covariance matrix (not a fixed parameter). Directly affects import supply in rotw_import_export(): Y_I = exp(α*log(Y_I) + β + epsilon_I). Correlated with other epsilon shocks."
+13,epsilon_E,Float,Scalar,Exogenous Shocks,External supply shock (exports),"Stochastically computed each period from covariance matrix (not a fixed parameter). Directly affects export demand in rotw_import_export(). Correlated with other epsilon shocks."
+14,epsilon_I,Float,Scalar,Exogenous Shocks,External supply shock (imports),"Stochastically computed each period from covariance matrix (not a fixed parameter). Directly affects import supply in rotw_import_export(). Correlated with other epsilon shocks."
 15,t,Integer,Scalar,Time Index,Current simulation period,

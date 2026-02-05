@@ -16,8 +16,9 @@ This folder contains structured documentation of the variables used by each agen
 - **Rest of World**: 27 state variables (25 base + 2 CANVAS), 2 transient variables
 - **Model Properties**: 39 parameters (dimensions, tax rates, behavioral, banking, product coefficients, technology, initial conditions)
 - **Calibration and Validation Data**: 28 data series (national accounts, consumption, capital formation, trade, income components, price indicators, sectoral data)
+- **Aggregates**: 15 computed macro indicators (GDP, inflation, price indices, expectations, exogenous shocks, time index)
 
-**Totals**: 121 state variables, 32 transient variables, 39 model parameters, and 28 calibration/validation data series documented across 15 CSV files.
+**Totals**: 121 state variables, 32 transient variables, 39 model parameters, 28 calibration/validation data series, and 15 aggregate indicators documented across 16 CSV files.
 
 ## Documentation Files
 All data tables are located in the `docs/agent_variable_tables` subfolder.
@@ -36,6 +37,7 @@ All data tables are located in the `docs/agent_variable_tables` subfolder.
 - `docs/agent_variable_tables/firm_agent_transient_variables.csv`: A list of key **transient (local) variables** used in firm-level calculations, which are not stored as part of the agent's state but are critical for understanding its behavior.
 - `docs/agent_variable_tables/properties_table.csv`: Comprehensive list of 39 model parameters and configuration values, including economic dimensions, tax rates, behavioral parameters, banking coefficients, technology matrices, and initial conditions.
 - `docs/agent_variable_tables/calibration_validation_data_table.csv`: Time series data for 28 macroeconomic indicators tracked during model simulation, including national accounts (GDP, GVA), consumption, capital formation, trade, income components, price indicators, and sectoral data for validation and comparison with real Austrian economic statistics.
+- `docs/agent_variable_tables/aggregates_table.csv`: Computed macro-level indicators updated each simulation period: GDP, inflation, price indices by product and sector, inflation expectations, and exogenous shocks (Euro Area GDP, export, import). Includes detailed notes on the stochastic nature of epsilon shock variables.
 
 ## Key Definitions
 
@@ -112,4 +114,7 @@ The transient variable tables (`*_transient_variables.csv`) are not exhaustive l
 - Replaced cross product symbol (×) with "by" notation in matrix dimensions for consistency.
 - Added Parameter Type column documentation to README explaining each category (Dimension, Tax Rate, Behavioral, Banking, Product Coefficient, Technology, Initial Condition).
 - Created `calibration_validation_data_table.csv` documenting all 28 data series from `model.data`: national accounts (GDP, GVA), consumption, capital formation, trade, income components, price indicators, and sectoral data. These time series are recorded during simulation via `collect_data!()` and used for model validation and comparison with real Austrian economic statistics.
-- Updated Documentation Summary to reflect 28 calibration/validation data series and 15 total CSV files (121 state + 32 transient + 39 parameters + 28 data series).
+- Renamed `collection_time` data category from "Metadata" to "Time Index" for clarity.
+- Changed `nominal_sector_gva` and `real_sector_gva` Type from "Vector of Vectors" to "Matrix" with dimensions "time by 62" for semantic clarity.
+- Created `aggregates_table.csv` documenting all 15 fields from the `Aggregates` struct: 2 GDP/growth variables (Y, Y_e, gamma_e), 2 inflation variables (pi_, pi_e), 8 price indices (P_bar variants), 3 exogenous shocks (epsilon_Y_EA, epsilon_E, epsilon_I), and 1 time index (t). Added detailed Note column explaining that epsilon shocks are stochastically computed each period from a covariance matrix via Cholesky decomposition, not fixed parameters, and detailing their specific roles in driving Rest of World dynamics.
+- Updated Documentation Summary to reflect 15 aggregate indicators and 16 total CSV files (121 state + 32 transient + 39 parameters + 28 data series + 15 aggregates).

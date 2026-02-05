@@ -21,23 +21,30 @@ This folder contains structured documentation of the variables used by each agen
 **Totals**: 121 state variables, 32 transient variables, 39 model parameters, 28 calibration/validation data series, and 15 aggregate indicators documented across 16 CSV files.
 
 ## Documentation Files
-All data tables are located in the `docs/agent_variable_tables` subfolder.
-- `agent_variable_tables/workers_agent_transient_variables.csv`: A list of key transient variables for the `Workers` agent (shared by both active and inactive workers).
-- `agent_variable_tables/workers_inactive_agent_table.csv`: Detailed breakdown of state variables for the `Workers` agent (inactive workers).
-- `agent_variable_tables/workers_active_agent_table.csv`: Detailed breakdown of state variables for the `Workers` agent (active workers, including employed and unemployed).
-- `agent_variable_tables/government_agent_transient_variables.csv`: A list of key transient variables for the `Government` agent.
-- `agent_variable_tables/government_agent_table.csv`: Detailed breakdown of state variables for the `Government` agent.
-- `agent_variable_tables/central_bank_agent_transient_variables.csv`: A list of key transient variables for the `CentralBank` agent.
-- `agent_variable_tables/central_bank_agent_table.csv`: Detailed breakdown of state variables for the `CentralBank` agent.
-- `docs/agent_variable_tables/bank_agent_transient_variables.csv`: A list of key transient variables for the `Bank` agent.
-- `docs/agent_variable_tables/bank_agent_table.csv`: Detailed breakdown of state variables for the `Bank` agent and its embedded owner household.
-- `docs/agent_variable_tables/rotw_agent_transient_variables.csv`: A list of key transient variables for the `RestOfTheWorld` agent.
-- `docs/agent_variable_tables/rotw_agent_table.csv`: Detailed breakdown of state variables for the `RestOfTheWorld` agent, including CANVAS extension variables.
-- `docs/agent_variable_tables/firm_agent_table.csv`: Detailed breakdown of **state variables** in the `Firms` agent role, distinguishing between the firm's production data and the owner's (investor) household data.
-- `docs/agent_variable_tables/firm_agent_transient_variables.csv`: A list of key **transient (local) variables** used in firm-level calculations, which are not stored as part of the agent's state but are critical for understanding its behavior.
-- `docs/agent_variable_tables/properties_table.csv`: Comprehensive list of 39 model parameters and configuration values, including economic dimensions, tax rates, behavioral parameters, banking coefficients, technology matrices, and initial conditions.
-- `docs/agent_variable_tables/calibration_validation_data_table.csv`: Time series data for 28 macroeconomic indicators tracked during model simulation, including national accounts (GDP, GVA), consumption, capital formation, trade, income components, price indicators, and sectoral data for validation and comparison with real Austrian economic statistics.
-- `docs/agent_variable_tables/aggregates_table.csv`: Computed macro-level indicators updated each simulation period: GDP, inflation, price indices by product and sector, inflation expectations, and exogenous shocks (Euro Area GDP, export, import). Includes detailed notes on the stochastic nature of epsilon shock variables.
+
+All data tables are organized in subdirectories within `docs/agent_variable_tables/`:
+
+### Agent Tables (agents/)
+- `agents/workers_active_agent_table.csv`: Detailed breakdown of state variables for the `Workers` agent (active workers, including employed and unemployed).
+- `agents/workers_inactive_agent_table.csv`: Detailed breakdown of state variables for the `Workers` agent (inactive workers).
+- `agents/workers_agent_transient_variables.csv`: Key transient variables for the `Workers` agent (shared by both active and inactive workers).
+- `agents/firm_agent_table.csv`: Detailed breakdown of **state variables** in the `Firms` agent role, distinguishing between the firm's production data and the owner's (investor) household data.
+- `agents/firm_agent_transient_variables.csv`: Key **transient (local) variables** used in firm-level calculations, which are not stored as part of the agent's state but are critical for understanding its behavior.
+- `agents/bank_agent_table.csv`: Detailed breakdown of state variables for the `Bank` agent and its embedded owner household.
+- `agents/bank_agent_transient_variables.csv`: Key transient variables for the `Bank` agent.
+- `agents/central_bank_agent_table.csv`: Detailed breakdown of state variables for the `CentralBank` agent.
+- `agents/central_bank_agent_transient_variables.csv`: Key transient variables for the `CentralBank` agent.
+- `agents/government_agent_table.csv`: Detailed breakdown of state variables for the `Government` agent.
+- `agents/government_agent_transient_variables.csv`: Key transient variables for the `Government` agent.
+- `agents/rotw_agent_table.csv`: Detailed breakdown of state variables for the `RestOfTheWorld` agent, including CANVAS extension variables.
+- `agents/rotw_agent_transient_variables.csv`: Key transient variables for the `RestOfTheWorld` agent.
+
+### Model Configuration (model_configuration/)
+- `model_configuration/properties_table.csv`: Comprehensive list of 39 model parameters and configuration values, including economic dimensions, tax rates, behavioral parameters, banking coefficients, technology matrices, and initial conditions.
+
+### Data and Forecasting (data_and_forecast/)
+- `data_and_forecast/calibration_validation_data_table.csv`: Time series data for 28 macroeconomic indicators tracked during model simulation, including national accounts (GDP, GVA), consumption, capital formation, trade, income components, price indicators, and sectoral data for validation and comparison with real Austrian economic statistics.
+- `data_and_forecast/aggregates_table.csv`: Computed macro-level indicators updated each simulation period: GDP, inflation, price indices by product and sector, inflation expectations, and exogenous shocks (Euro Area GDP, export, import). Includes detailed notes on the stochastic nature of epsilon shock variables.
 
 ## Key Definitions
 

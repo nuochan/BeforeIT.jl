@@ -41,6 +41,7 @@ All data tables are organized in subdirectories within `docs/agent_variable_tabl
 
 ### Model Configuration (model_configuration/)
 - `model_configuration/properties_table.csv`: Comprehensive list of 39 model parameters and configuration values, including economic dimensions, tax rates, behavioral parameters, banking coefficients, technology matrices, and initial conditions.
+- `model_configuration/timescale_explanation.md`: Detailed explanation of the `timescale` calibration variable — the scalar that bridges annual Input-Output table data to the model's quarterly frequency. Covers the formula, every use in the calibration code (categorized by type), which variables do and don't require scaling, and why the value differs from a naive 1/4.
 
 ### Data and Forecasting (data_and_forecast/)
 - `data_and_forecast/calibration_validation_data_table.csv`: Time series data for 28 macroeconomic indicators tracked during model simulation, including national accounts (GDP, GVA), consumption, capital formation, trade, income components, price indicators, and sectoral data for validation and comparison with real Austrian economic statistics.
@@ -125,3 +126,6 @@ The transient variable tables (`*_transient_variables.csv`) are not exhaustive l
 - Changed `nominal_sector_gva` and `real_sector_gva` Type from "Vector of Vectors" to "Matrix" with dimensions "time by 62" for semantic clarity.
 - Created `aggregates_table.csv` documenting all 15 fields from the `Aggregates` struct: 2 GDP/growth variables (Y, Y_e, gamma_e), 2 inflation variables (pi_, pi_e), 8 price indices (P_bar variants), 3 exogenous shocks (epsilon_Y_EA, epsilon_E, epsilon_I), and 1 time index (t). Added detailed Note column explaining that epsilon shocks are stochastically computed each period from a covariance matrix via Cholesky decomposition, not fixed parameters, and detailing their specific roles in driving Rest of World dynamics.
 - Updated Documentation Summary to reflect 15 aggregate indicators and 16 total CSV files (121 state + 32 transient + 39 parameters + 28 data series + 15 aggregates).
+
+### 2026-02-13
+- Created `model_configuration/timescale_explanation.md` documenting the `timescale` calibration variable: its formula, all ~30 uses in the calibration code (categorized into sector parameters, financial rates, tax rates, social transfers, and macro time series), which variables do and don't require scaling, and why the actual value (≈0.156 for Italy 2010Q1) differs from a naive 0.25.

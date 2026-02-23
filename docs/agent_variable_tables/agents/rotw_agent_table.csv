@@ -24,5 +24,5 @@ Number,Variable,Data Type,Length,Path,File,Agent Role,Model Field,Description
 23,Q_d_m,Float,62,/src/model_init/,agents.jl,RestOfTheWorld,model.rotw,"Demand for imported goods per domestic sector."
 24,P_m,Float,62,/src/model_init/,agents.jl,RestOfTheWorld,model.rotw,"Price of imports per domestic sector."
 25,P_l,Float,Scalar,/src/model_init/,agents.jl,RestOfTheWorld,model.rotw,"Price inflation of exports (aggregate tracking variable)."
-26,Y_EA_series,Float,"Non-fixed",/src/model_ext/,init_CANVAS.jl,RestOfTheWorld,model.rotw,"Historical time series of Euro Area GDP. Used for adaptive learning by the Central Bank. Its length grows by +1 at every simulation step."
-27,pi_EA_series,Float,"Non-fixed",/src/model_ext/,init_CANVAS.jl,RestOfTheWorld,model.rotw,"Historical time series of Euro Area Inflation. Used for adaptive learning by the Central Bank. Its length grows by +1 at every simulation step."
+26,Y_EA_series,Float,"Non-fixed",/src/model_extensions/,init_CANVAS.jl,RestOfTheWorld,model.rotw,"Historical time series of Euro Area GDP. Used for adaptive learning by the Central Bank. Its length grows by +1 at every simulation step."
+27,pi_EA_series,Float,"Non-fixed",/src/model_extensions/,init_CANVAS.jl,RestOfTheWorld,model.rotw,"Historical time series of Euro Area Inflation. Used for adaptive learning by the Central Bank. Its length grows by +1 at every simulation step."

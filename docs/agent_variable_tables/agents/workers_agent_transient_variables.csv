@@ -1,3 +1,3 @@
 Variable,File,Function(s),Model Version,Description
-Y_e_h,households.jl,"households_income_act(), households_income_inact(), households_income_firms(), households_income_bank()",Both,Expected disposable income used for budget planning. Calculated with expected inflation pi_e.
+Y_e_h,households.jl,"households_budget_act(), households_budget_inact(), households_budget_firms(), households_budget_bank()",Both,"Expected disposable income used for budget planning. Computed by calling the corresponding households_income_*() function with expected=true, then used to determine consumption and investment demands."
 DD_h,households.jl,households_deposits(),Both,"Change in deposits. Calculated as: Y_h - (1+tau_VAT)*C_h - (1+tau_CF)*I_h + r_bar*max(0,D_h) - r*max(0,-D_h)"

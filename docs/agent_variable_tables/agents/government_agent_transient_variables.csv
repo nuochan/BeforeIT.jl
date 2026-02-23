@@ -10,5 +10,4 @@ products,government.jl,gov_revenues,Both,"Product Tax Revenue: Tax on products (
 production,government.jl,gov_revenues,Both,"Production Tax Revenue: Tax on production (tau_K_i) collected from firm output."
 export_,government.jl,gov_revenues,Both,"Export Tax Revenue: Export tax (tau_EXPORT) collected from total export consumption. Variable has trailing underscore to avoid Julia keyword conflict."
 social_benefits,government.jl,gov_loans,Both,"Total Social Benefits: Total outlay on social benefits (unemployment benefits + sb_inact for inactive + sb_other for all)."
-Pi_G,government.jl,gov_loans,Both,"Government Deficit/Surplus: Budget balance calculated as Expenditures - Revenues."
-DL_G,government.jl,gov_loans,Both,"Change in Government Debt: New debt issued (or repaid) based on the deficit (Pi_G). Used to update L_G."
+Pi_G,government.jl,gov_loans,Both,"Government Deficit/Surplus: Budget balance calculated as social_benefits + government consumption + interest on debt - revenues. Immediately added to the state variable L_G (government debt)."

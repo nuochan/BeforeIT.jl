@@ -12,13 +12,13 @@ This folder contains structured documentation of the variables used by each agen
 - **Firms**: 44 state variables (37 firm + 7 investor household), 8 transient variables (624 firms in Austria)
 - **Bank**: 12 state variables (5 bank + 7 owner household), 3 transient variables (scalar)
 - **Central Bank**: 9 state variables (8 base + 1 CANVAS), 4 transient variables (scalar)
-- **Government**: 11 state variables, 13 transient variables (detailed revenue components)
+- **Government**: 11 state variables, 12 transient variables (detailed revenue components)
 - **Rest of World**: 27 state variables (25 base + 2 CANVAS), 2 transient variables
 - **Model Properties**: 39 parameters (dimensions, tax rates, behavioral, banking, product coefficients, technology, initial conditions)
 - **Calibration and Validation Data**: 28 data series (national accounts, consumption, capital formation, trade, income components, price indicators, sectoral data)
 - **Aggregates**: 15 computed macro indicators (GDP, inflation, price indices, expectations, exogenous shocks, time index)
 
-**Totals**: 121 state variables, 32 transient variables, 39 model parameters, 28 calibration/validation data series, and 15 aggregate indicators documented across 16 CSV files.
+**Totals**: 121 state variables, 31 transient variables, 39 model parameters, 28 calibration/validation data series, and 15 aggregate indicators documented across 16 CSV files.
 
 ## Documentation Files
 
@@ -129,3 +129,12 @@ The transient variable tables (`*_transient_variables.csv`) are not exhaustive l
 
 ### 2026-02-13
 - Created `model_configuration/timescale_explanation.md` documenting the `timescale` calibration variable: its formula, all ~30 uses in the calibration code (categorized into sector parameters, financial rates, tax rates, social transfers, and macro time series), which variables do and don't require scaling, and why the actual value (≈0.156 for Italy 2010Q1) differs from a naive 0.25.
+
+### 2026-02-23
+- **Audit and correction of all 16 CSV documentation files against source code.** Fixed 5 errors:
+  1. `central_bank_agent_transient_variables.csv`: Renamed phantom variable `DE_CB` to `Pi_CB` (correct variable name from `central_bank_profits()`), updated description and function reference.
+  2. `workers_agent_transient_variables.csv`: Corrected function names for `Y_e_h` from `households_income_*()` to `households_budget_*()` (the budget functions are where `Y_e_h` is assigned as a local variable).
+  3. `government_agent_transient_variables.csv`: Removed phantom variable `DL_G` (does not exist in source code; the debt change is `Pi_G` itself). Updated `Pi_G` description. Transient count: 13 → 12.
+  4. `rotw_agent_transient_variables.csv`: Changed `epsilon_pi_EA` Model Version from "CANVAS" to "Both" (exists in base model in `estimations.jl`), added `estimations.jl` to file reference.
+  5. `rotw_agent_table.csv`: Fixed path for CANVAS extension variables (rows 26-27) from `/src/model_ext/` to `/src/model_extensions/`.
+- Updated Documentation Summary totals: 32 → 31 transient variables.
